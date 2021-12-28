@@ -19,7 +19,11 @@
 */
 
 import Route from '@ioc:Adonis/Core/Route'
+import MoviesController from 'App/Controllers/Http/MoviesController'
+
 
 Route.get('/', async ({ view }) => {
   return view.render('welcome')
 })
+
+Route.resource('/movie', 'MoviesController')

@@ -14,19 +14,20 @@
   @!component('header')
   <main>
 
-    <div>
-      <h1 class="title">Welcome to MovieDB,</h1>
-      <p class="subtitle">
-        an experimental movie database!
-      </p>
+    <ul>
 
-      <ul>
-        <li>
-          <a href="/movie">
-            Click here to list all movies.
-          </a>
-        </li>
-      </ul>
+      @each (movie in movies)
+      <a href="/movie/{{movie.id}}">
+      <li>
+        <p>{{movie.title}}</p>
+        <p>{{movie.description}}</p>
+        <p>{{movie.release}}</p>
+      </li>
+    </a>
+      @end
+
+    </ul>
+
     </div>
   </main>
 </body>
