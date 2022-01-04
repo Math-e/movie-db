@@ -1,34 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
+@layout('layouts/main')
+@set('title', 'MovieDB')
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MovieDB</title>
-  @entryPointStyles('app')
-  @entryPointScripts('app')
-</head>
+@section('body')
 
-<body>
+  <div>
+    <h1 class="title">Welcome to MovieDB,</h1>
+    <p class="subtitle">
+      an experimental movie database!
+    </p>
 
-  @!header()
-  <main>
-
-    <div>
-      <h1 class="title">Welcome to MovieDB,</h1>
-      <p class="subtitle">
-        an experimental movie database!
-      </p>
-
-      <ul>
-        <li>
-          <a href="/movie">
-            Click here to list all movies.
-          </a>
-        </li>
-      </ul>
-    </div>
-  </main>
-</body>
-
-</html>
+    <ul>
+      <li>
+        <a href="/movie">
+          Click here to list all movies.
+        </a>
+      </li>
+    </ul>
+  </div>
+  
+@end

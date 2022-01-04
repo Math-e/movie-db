@@ -1,35 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
+@layout('layouts/main')
+@set('title', 'MovieDB')
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MovieDB</title>
-  @entryPointStyles('app')
-  @entryPointScripts('app')
-</head>
+@section('body')
+<div>
+  <ul>
 
-<body>
-
-  @!component('header')
-  <main>
-
-    <ul>
-
-      @each (movie in movies)
-      <a href="/movie/{{movie.id}}">
+    @each (movie in movies)
+    <a href="/movie/{{movie.id}}">
       <li>
         <p>{{movie.title}}</p>
         <p>{{movie.description}}</p>
         <p>{{movie.release}}</p>
       </li>
     </a>
-      @end
+    @end
 
-    </ul>
+  </ul>
 
-    </div>
-  </main>
-</body>
+</div>
 
-</html>
+@end

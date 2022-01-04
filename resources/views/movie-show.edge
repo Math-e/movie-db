@@ -1,18 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
+@layout('layouts/main')
+@set('title', 'MovieDB')
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MovieDB</title>
-  @entryPointStyles('app')
-  @entryPointScripts('app')
-</head>
-
-<body>
-
-  @!component('header')
-  <main>
+@section('body')
 
     <ul>
 
@@ -25,7 +14,5 @@
     </ul>
 
     </div>
-  </main>
-</body>
 
-</html>
+@end
