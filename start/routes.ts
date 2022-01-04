@@ -23,7 +23,7 @@ import MoviesController from 'App/Controllers/Http/MoviesController'
 
 
 Route.get('/', async ({ view }) => {
-  return view.render('welcome')
+  return await view.render('welcome')
 })
 
 Route.resource('/movie', 'MoviesController')

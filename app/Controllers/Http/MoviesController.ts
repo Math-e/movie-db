@@ -5,7 +5,7 @@ export default class MoviesController {
 
   public async index({view}: HttpContextContract) {
     const movies = await Movie.all()
-    return view.render('movie-index', {movies: movies})
+    return await view.render('movie-index', {movies: movies})
   }
 
   public async show ({params, view}: HttpContextContract) {
@@ -14,7 +14,7 @@ export default class MoviesController {
     let formattedDate = new Date(movie.release)
     formattedDate.toDateString()
     
-    return view.render('movie-show', {movie: movie, formattedDate: formattedDate})
+    return await view.render('movie-show', {movie: movie, formattedDate: formattedDate})
   }
 
 }
