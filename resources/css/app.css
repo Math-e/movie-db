@@ -5,6 +5,7 @@ html, body {
   color: #EEEEEE;
   font-family: 'Poppins', sans-serif;
   position: relative;
+  min-height: 100vh
 }
 
 * {
@@ -18,6 +19,7 @@ a {
 }
 
 main {
+  min-height: 90vh;
   max-width: 800px;
   margin: auto;
   padding: 0 30px;

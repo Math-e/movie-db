@@ -8,9 +8,9 @@
     @each (movie in movies)
     <a href="/movie/{{movie.id}}">
       <li>
-        <p>{{movie.title}}</p>
-        <p>{{movie.description}}</p>
-        <p>{{movie.release}}</p>
+        <h3>{{movie.title}}</h3>
+        <p> {{truncate(movie.description, 120)}} </p>
+        <!--<p>{{movie.release}}</p> -->
       </li>
     </a>
     @end
