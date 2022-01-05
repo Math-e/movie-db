@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
 
-html, body {
+html,
+body {
   background-color: #1e1e1ecc;
-  color: #EEEEEE;
+  color: #eeeeee;
   font-family: 'Poppins', sans-serif;
   position: relative;
-  min-height: 100vh
+  min-height: 100vh;
 }
 
 * {
@@ -26,6 +27,31 @@ main {
   align-items: center;
   display: flex;
   justify-content: center;
+
+  ul {
+    list-style: none;
+  }
+
+  li {
+    margin-bottom: 5px;
+    position: relative;
+    padding-left: 25px;
+
+    &:before {
+      content: '—';
+      position: absolute;
+      left: 0;
+    }
+  }
+
+  a {
+    color: #fefefe;
+  }
+
+  code {
+    font-size: 16px;
+    background: #d4ceff;
+  }
 }
 
 .title {
@@ -45,32 +71,6 @@ p {
   margin-bottom: 20px;
 }
 
-main ul {
-  list-style: none;
-}
-
-main li {
-  margin-bottom: 5px;
-  position: relative;
-  padding-left: 25px;
-}
-
-main li:before {
-  content: '—';
-  position: absolute;
-  left: 0;
-}
-
-main a {
-  color: #fefefe;
-}
-
-main code {
-  font-size: 16px;
-  background: #d4ceff;
-}
-
-
 header {
   padding: 5px;
   position: sticky;
@@ -84,29 +84,29 @@ header {
   justify-content: space-around;
   align-items: center;
   flex-wrap: nowrap;
-}
-header .name {
+
+  /* search input */
+  input {
+    width: 60%;
+    max-width: 500px;
+    height: 20px;
+    padding: 4px;
+    margin: 5px;
+    font-size: larger;
+    text-align: center;
+  }
+
+  .name {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-weight: 200;
     font-size: 30px;
-    line-height: 1.0;
-    
+    line-height: 1;
+
+    a {
+      color: #fefefe;
+    }
   }
-header .name a {
-    color: #fefefe;
 }
 
-/* search input */
-header input {
-  width: 60%;
-  max-width: 500px;
-  height: 20px;
-  padding: 4px;
-  margin: 5px;
-  font-size: larger;
-  text-align: center;
-}
-
-@media screen and (max-width: 800px){
-  
+@media screen and (max-width: 800px) {
 }
