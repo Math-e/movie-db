@@ -27,4 +27,4 @@ Route.get('/', async ({ view }) => {
 })
 
 Route.resource('/movie', 'MoviesController')
-Route.get('/search', 'Moviescontroller.search')
+Route.get('/search', 'MoviesController.search')
