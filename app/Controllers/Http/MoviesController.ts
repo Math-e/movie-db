@@ -17,7 +17,7 @@ export default class MoviesController {
     return await view.render('movie-show', {movie: movie, formattedDate: formattedDate})
   }
   
-  public async search ({params, response}: HttpContextContract) {
+  public async search ({params, response}) {
     const movies = await Movie.query()
       .where('title', 'like', "%" + params.content + "%")
       .orderBy('release', 'desc')
