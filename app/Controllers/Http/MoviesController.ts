@@ -18,11 +18,14 @@ export default class MoviesController {
   }
   
   public async search ({request, view}: HttpContextContract) {
-    const movies = await Movie.query()
+    let movies = await Movie.query()
       .where('title', 'like', '%' + request.qs().q + '%')
       .orderBy('release', 'desc')
     
-    return await view.render('movie-index', {movies: movies})
+    let empty
+    if (movies.length == 0) empty = true
+    
+    return await view.render('movie-index', {movies: movies, empty: empty})
   }
 
 }
