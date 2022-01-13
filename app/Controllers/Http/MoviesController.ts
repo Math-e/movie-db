@@ -17,12 +17,12 @@ export default class MoviesController {
     return await view.render('movie-show', {movie: movie, formattedDate: formattedDate})
   }
   
-  public async search ({params, response}) {
+  public async search ({request, view}: HttpContextContract) {
     const movies = await Movie.query()
-      .where('title', 'like', "%" + params.content + "%")
+      .where('title', 'like', '%' + request.qs().q + '%')
       .orderBy('release', 'desc')
     
-    return response.send(movies)
+    return await view.render('movie-index', {movies: movies})
   }
 
 }

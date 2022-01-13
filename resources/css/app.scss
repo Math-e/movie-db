@@ -86,12 +86,16 @@ header {
   flex-wrap: nowrap;
 
   /* search input */
-  input {
+  .searchForm {
     width: 60%;
-    max-width: 500px;
     height: 20px;
     padding: 4px;
     margin: 5px;
+  }
+  
+  input {
+    width: 100%;
+    max-width: 500px;
     font-size: larger;
     text-align: center;
   }
